@@ -1,0 +1,6 @@
+---
+- hosts: practice
+  become: true
+  gather_facts: true
+  roles:
+    - minecraft

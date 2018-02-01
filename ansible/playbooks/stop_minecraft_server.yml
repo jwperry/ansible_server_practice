@@ -1,0 +1,9 @@
+---
+- hosts: practice
+  become: true
+  gather_facts: true
+  tasks:
+    - name: Stops the Minecraft server from running
+      systemd:
+        state: stopped
+        name: minecraft

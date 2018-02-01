@@ -1,0 +1,7 @@
+---
+- hosts: practice
+  become: true
+  gather_facts: true
+  tasks:
+  - name: Start Minecraft server
+    shell: java -Xmx1024M -Xms1024M -jar minecraft_server.1.12.2.jar nogui

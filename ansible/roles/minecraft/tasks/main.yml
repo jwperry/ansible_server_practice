@@ -1,0 +1,32 @@
+---
+- name: Install dependencies
+  apt:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - "openjdk-8-jre"
+    - "python"
+
+- name: Create Minecraft directory
+  file:
+    path: "/opt/minecraft"
+    state: directory
+
+- name: Adding eula.txt and minecraft.service
+  template:
+    src: "{{ item.name }}"
+    dest: "{{ item.destination }}"
+  with_items:
+    - {name: "eula.j2", destination: "/opt/minecraft/eula.txt"}
+    - {name: "minecraft-service.j2", destination: "/etc/systemd/system/minecraft.service"}
+
+- name: Download Minecraft server .jar file
+  get_url:
+    url: "https://s3.amazonaws.com/Minecraft.Download/versions/1.12.2/minecraft_server.1.12.2.jar"
+    dest: "/opt/minecraft/"
+
+- name: Start Minecraft server
+  systemd:
+    name: minecraft
+    enabled: true
+    state: started
