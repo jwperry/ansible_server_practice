@@ -3,8 +3,8 @@
   become: true
   gather_facts: true
   tasks:
-  - name: Start Minecraft server
-    systemd:
-      name: minecraft
-      enabled: true
-      state: started
+    - name: Start Minecraft server
+      systemd:
+        name: minecraft
+        enabled: true
+        state: started

@@ -1,9 +1,9 @@
 [practice]
-dev-practice-jp-01 ansible_host=ec2-54-214-126-90.us-west-2.compute.amazonaws.com ansible_user=ubuntu
-dev-practice-jp-02 ansible_host=ec2-34-217-132-25.us-west-2.compute.amazonaws.com ansible_user=ubuntu
-dev-practice-jp-03 ansible_host=ec2-34-217-114-190.us-west-2.compute.amazonaws.com ansible_user=ubuntu
-dev-practice-jp-04 ansible_host=ec2-54-186-195-33.us-west-2.compute.amazonaws.com ansible_user=ubuntu
-dev-practice-jp-05 ansible_host=ec2-34-217-50-8.us-west-2.compute.amazonaws.com ansible_user=ubuntu
+dev-practice-jp-01 ansible_host=ec2-34-209-242-253.us-west-2.compute.amazonaws.com ansible_user=ubuntu
+dev-practice-jp-02 ansible_host=ec2-34-214-22-237.us-west-2.compute.amazonaws.com ansible_user=ubuntu
+dev-practice-jp-03 ansible_host=ec2-35-160-21-214.us-west-2.compute.amazonaws.com ansible_user=ubuntu
+dev-practice-jp-04 ansible_host=ec2-54-218-236-255.us-west-2.compute.amazonaws.com ansible_user=ubuntu
+dev-practice-jp-05 ansible_host=ec2-54-191-5-39.us-west-2.compute.amazonaws.com ansible_user=ubuntu
 
 [all:vars]
 ansible_ssh_private_key_file=~/.ssh/dev-practice-jp-ssh

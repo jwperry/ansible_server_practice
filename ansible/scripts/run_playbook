@@ -1,0 +1,5 @@
+#!/bin/bash
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+ANSIBLE_CONFIG=$DIR/..
+ANSIBLE_ROLES_PATH=$DIR/../roles
+ansible-playbook $1 -vvv
